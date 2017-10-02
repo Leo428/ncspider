@@ -2,17 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bd4219e5-2fc4-4907-bb65-c376b05d7542" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/kotlin-reflect.jar" afterPath="$PROJECT_DIR$/lib/kotlin-reflect.jar" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/kotlin-stdlib-jre7-sources.jar" afterPath="$PROJECT_DIR$/lib/kotlin-stdlib-jre7-sources.jar" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/kotlin-stdlib-jre7.jar" afterPath="$PROJECT_DIR$/lib/kotlin-stdlib-jre7.jar" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/kotlin-stdlib-jre8-sources.jar" afterPath="$PROJECT_DIR$/lib/kotlin-stdlib-jre8-sources.jar" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/kotlin-stdlib-jre8.jar" afterPath="$PROJECT_DIR$/lib/kotlin-stdlib-jre8.jar" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/kotlin-stdlib-sources.jar" afterPath="$PROJECT_DIR$/lib/kotlin-stdlib-sources.jar" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/kotlin-stdlib.jar" afterPath="$PROJECT_DIR$/lib/kotlin-stdlib.jar" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/kotlin-test.jar" afterPath="$PROJECT_DIR$/lib/kotlin-test.jar" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/ncspider/Tester.class" afterPath="$PROJECT_DIR$/bin/ncspider/Tester.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/ncspider/ncSpider.class" afterPath="$PROJECT_DIR$/bin/ncspider/ncSpider.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ncspider/Tester.kt" afterPath="$PROJECT_DIR$/src/ncspider/Tester.kt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ncspider/ncSpider.kt" afterPath="$PROJECT_DIR$/src/ncspider/ncSpider.kt" />
     </list>
     <ignored path="$PROJECT_DIR$/bin/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -27,8 +19,8 @@
       <file leaf-file-name="ncSpider.kt" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/ncspider/ncSpider.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
-              <caret line="115" column="50" lean-forward="true" selection-start-line="115" selection-start-column="50" selection-end-line="115" selection-end-column="50" />
+            <state relative-caret-position="105">
+              <caret line="83" column="41" lean-forward="true" selection-start-line="83" selection-start-column="41" selection-end-line="83" selection-end-column="41" />
               <folding>
                 <element signature="e#18#170#0" expanded="true" />
               </folding>
@@ -260,16 +252,23 @@
       <workItem from="1506639697357" duration="231000" />
       <workItem from="1506792776473" duration="89000" />
       <workItem from="1506976840083" duration="134000" />
-      <workItem from="1506977015658" duration="5727000" />
+      <workItem from="1506977015658" duration="6004000" />
     </task>
+    <task id="LOCAL-00001" summary="getSchedule finished">
+      <created>1506983511344</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1506983511344</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="23530000" />
+    <option name="totallyTimeSpent" value="23807000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1938" height="1048" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -278,7 +277,7 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3256579" sideWeight="0.5125" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3256579" sideWeight="0.4875" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3256579" sideWeight="0.4875" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1078125" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -328,6 +327,10 @@
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="getSchedule finished" />
+    <option name="LAST_COMMIT_MESSAGE" value="getSchedule finished" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -513,8 +516,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/ncspider/ncSpider.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="115" column="50" lean-forward="true" selection-start-line="115" selection-start-column="50" selection-end-line="115" selection-end-column="50" />
+        <state relative-caret-position="105">
+          <caret line="83" column="41" lean-forward="true" selection-start-line="83" selection-start-column="41" selection-end-line="83" selection-end-column="41" />
           <folding>
             <element signature="e#18#170#0" expanded="true" />
           </folding>
