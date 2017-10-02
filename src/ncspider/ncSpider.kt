@@ -13,6 +13,7 @@ class ncSpider(private var username: String, private var password: String)// TOD
     var NC_SHELL_URL = "http://netclassroom.chaminade.org/NetClassroom7/Forms/NCShell.aspx"
     lateinit var req: Response
     var cookies = mutableMapOf<String, String>()
+
     var classes = mutableMapOf<String, String>()
         get() {
             navigate2Page("myMenuId\$Menu1", "mnuPerformance")
@@ -23,6 +24,27 @@ class ncSpider(private var username: String, private var password: String)// TOD
                 mClasses.put((e.text().split(",")[1].trim()), e.`val`())
             }
             return mClasses
+        }
+
+    var getSchedule = mutableListOf<Map<String, String>>()
+        get() {
+            login()
+            navigate2Page("myMenuId:Menu1","mnuScheduleCalendar");
+            val mSchedule = mutableListOf<Map<String, String>>()
+            val content = this.req.parse().body().getElementById("Table1").getElementsByTag("span")
+            for(date:Element in content) {
+                val info =  date.text().split(",")
+                if (info.size == 5) {
+                    val schedule = mutableMapOf<String, String>()
+                    schedule.put("block", info[0])
+                    schedule.put("time", info[1])
+                    schedule.put("class", info[2])
+                    schedule.put("teacher", info[3])
+                    schedule.put("room", info[4])
+                    mSchedule.add(schedule)
+                }
+            }
+            return (mSchedule)
         }
 
     private fun navigate2Page(eventTarget:String, eventArgument:String, fakeInputs:MutableMap<String,String> = mutableMapOf()){
