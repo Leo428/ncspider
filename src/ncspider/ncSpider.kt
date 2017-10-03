@@ -1,12 +1,11 @@
 package ncspider
 
-import java.io.IOException
 import org.jsoup.Connection.Method
 import org.jsoup.Connection.Response
 import org.jsoup.Jsoup
 import org.jsoup.nodes.Element
 
-class ncSpider(private var username: String, private var password: String)// TODO Auto-generated constructor stub
+class NCSpider(private var username: String, private var password: String)// TODO Auto-generated constructor stub
 {
     var NC_BASE_URL = "http://netclassroom.chaminade.org"
     var NC_LOGIN_URL = NC_BASE_URL + "/NetClassroom7/Forms/login.aspx"
@@ -17,7 +16,7 @@ class ncSpider(private var username: String, private var password: String)// TOD
     var classes = mutableMapOf<String, String>()
         get() {
             navigate2Page("myMenuId\$Menu1", "mnuPerformance")
-            var mClasses = mutableMapOf<String, String>()
+            val mClasses = mutableMapOf<String, String>()
             val doc = this.req.parse()
             val classSpinner = doc.getElementById("_ctl14_cpWhatever_lstWhatever").getElementsByTag("option")
             for (e:Element in classSpinner) {
@@ -48,7 +47,7 @@ class ncSpider(private var username: String, private var password: String)// TOD
         }
 
     private fun navigate2Page(eventTarget:String, eventArgument:String, fakeInputs:MutableMap<String,String> = mutableMapOf()){
-        var inputs = mutableMapOf<String,String>()
+        val inputs = mutableMapOf<String,String>()
         val content = this.req.parse().body().getElementById("Form1").getElementsByTag("input")
         for (e in content) {
             if (e.id() !== "") {
@@ -83,9 +82,7 @@ class ncSpider(private var username: String, private var password: String)// TOD
                 .execute()
         this.cookies = this.req.cookies()
         val content = req.parse().body().getElementsByTag("input")
-        for (e in content) {
-            inputs.put(e.id(), "")
-        }
+        content.forEach { inputs.put(it.id(), "") }
         inputs.put("sid", this.username)
         inputs.put("pin", this.password)
         this.req = Jsoup.connect(NC_LOGIN_URL)
@@ -95,18 +92,11 @@ class ncSpider(private var username: String, private var password: String)// TOD
                 .data(inputs)
                 .method(Method.POST)
                 .execute()
-        try {
-            if (this.req.parse().text().toLowerCase().indexOf("loading") >= 0) {
-                println("login successful!")
-                this.cookies = this.req.cookies()
-                return true
-            } else {
-                throw RuntimeException("Login failed for user " + this.username)
-            }
-        } catch (e1: IOException) {
-            e1.printStackTrace()
-        }
-        return false
+        if (this.req.parse().text().toLowerCase().indexOf("loading") >= 0) {
+            println("login successful!")
+            this.cookies = this.req.cookies()
+            return true
+        } else { throw RuntimeException("Login failed for user " + this.username) }
     }
 
     fun getClassesGrades(courseId: String):String {
@@ -114,7 +104,8 @@ class ncSpider(private var username: String, private var password: String)// TOD
         navigate2Page("_ctl14\$cpWhatever\$lstWhatever", "", classInfo)
         val content = this.req.parse().body()
                 .getElementById("ncContent_webDG")
-                .getElementsByTag("span")[1].text().split(':')[1].trim()
-        return (content)
+                .getElementsByTag("span")[1].text().split(':')
+        if (content.size > 1) return (content[1].trim())
+        else return ("N/A")
     }
 }
